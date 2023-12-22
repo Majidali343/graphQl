@@ -14,7 +14,7 @@ func main() {
 
 	r.GET("/jokes", handlers.GetJokesHandler)
 
-	r.GET("/graphql", handlers.GraphqlHandler)
+	r.POST("/graphql", handlers.GraphqlHandler)
 
 	port := 8080
 	address := fmt.Sprintf(":%d", port)

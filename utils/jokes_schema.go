@@ -17,9 +17,9 @@ var JokeType = graphql.NewObject(
 	},
 )
 
-var RootQuery = graphql.NewObject(
+var JokesQuery = graphql.NewObject(
 	graphql.ObjectConfig{
-		Name: "RootQuery",
+		Name: "JokesQuery",
 		Fields: graphql.Fields{
 			"jokes": &graphql.Field{
 				Type: graphql.NewList(JokeType),
@@ -34,6 +34,6 @@ var RootQuery = graphql.NewObject(
 
 var Schema, _ = graphql.NewSchema(
 	graphql.SchemaConfig{
-		Query: RootQuery,
+		Query: JokesQuery,
 	},
 )
